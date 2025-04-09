@@ -58,7 +58,7 @@ npm install
 
 6. Setup environment variables
 -  Create .env file
-- Add NEXT_PUBLIC_BACKEND_URL=http://127.0.0.1:5000/api to .env file
+- Add NEXT_PUBLIC_BACKEND_URL=http://127.0.0.1:5000/ to .env file
 
 7. Run react app
 
@@ -67,11 +67,22 @@ npm run dev
 
 ```
 
-Visit `http://localhost:5000` in your web browser to access the application.
+Visit `http://localhost:3000` in your web browser to access the application.
+
+## Confidential Computing with Secret AI
+Tradi-app leverages Secret Network's confidential computing capabilities through the Secret AI SDK. This integration ensures that:
+
+- Trading analyses remain confidential and are not exposed to third parties
+- User queries about trading strategies stay private
+- AI model interactions happen within Secret Network's secure enclaves
+- Trading decisions and patterns cannot be extracted or front-run by others
+- By building on Secret AI, Tradi creates a truly private experience for traders, allowing them to leverage AI capabilities without compromising on security or exposing valuable trading insights.
 
 ## Next Steps:
-- Incorprate and test live trading startegies
-- Test automated tarding
+- Enhance privacy-preserving features for portfolio analysis
+- Implement confidential automated trading strategies
+- Add cross-chain support for trading on multiple blockchains while maintaining privacy
+
 
 ## Contributing
 

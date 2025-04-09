@@ -8,6 +8,7 @@ from secret_ai_sdk.secret_ai import ChatSecret
 from secret_ai_sdk.secret import Secret
 
 load_dotenv()
+private_key = os.getenv("SECRET_AI_API_KEY")
 
 class SecretChatAgent:
     def __init__(self):
@@ -92,7 +93,7 @@ class SecretChatAgent:
             ("system", f"Initial analysis for {symbol}: {analysis_result}\n\nThe user may ask follow-up questions about {symbol}.")
         )
 
-    async def get_response(self, message, session_id="default"):
+    async def get_response(self, message, session_id="default", private_key=None, agent_id=None, environment=None):
         """Get response from Secret AI."""
         try:
             # Initialize conversation history for new sessions
@@ -118,7 +119,7 @@ class SecretChatAgent:
             # Get response from Secret AI
             response = await asyncio.to_thread(
                 self.llm.invoke,
-                messages=messages,
+                input=messages,
                 stream=False
             )
 
