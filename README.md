@@ -58,7 +58,7 @@ npm install
 
 6. Setup environment variables
 -  Create .env file
-- Add NEXT_PUBLIC_BACKEND_URL=http://127.0.0.1:5000/ to .env file
+- Add `NEXT_PUBLIC_BACKEND_URL=http://127.0.0.1:5000/` to .env file
 
 7. Run react app
 
